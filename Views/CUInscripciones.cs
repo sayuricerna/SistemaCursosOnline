@@ -73,8 +73,6 @@ namespace SistemaCursosOnline.Views
             {
                 dataGridView1.DataSource = logicaInscripciones.Buscar(txtBuscar.Text.Trim());
             }
-
-            // Modificar según los campos disponibles en el modelo de inscripción
             dataGridView1.Columns["IdEstudiante"].Visible = false;
             dataGridView1.Columns["IdCurso"].Visible = false;
             dataGridView1.Columns["IdInscripcion"].Visible = false;
@@ -142,6 +140,11 @@ namespace SistemaCursosOnline.Views
             {
                 dataGridView1.Rows[i].Cells[0].Value = i + 1;
             }
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            this.cargaGrilla(1);
         }
     }
 }

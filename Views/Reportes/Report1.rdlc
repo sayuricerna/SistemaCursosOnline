@@ -2,60 +2,6 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Textbox Name="Textbox24">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>ESTUDIANTE: </Value>
-                <Style>
-                  <FontSize>16pt</FontSize>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>=Fields!NombreEstudiante.Value</Value>
-                <Style>
-                  <FontSize>16pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>CEDULA:  </Value>
-                <Style>
-                  <FontSize>16pt</FontSize>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>=Fields!CedulaEstudiante.Value</Value>
-                <Style>
-                  <FontSize>16pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox24</rd:DefaultName>
-        <Top>0.16333in</Top>
-        <Left>0.26333in</Left>
-        <Height>0.63056in</Height>
-        <Width>6.51667in</Width>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Tablix Name="Tablix2">
         <TablixBody>
           <TablixColumns>
@@ -472,11 +418,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>1.105in</Top>
+        <Top>0.73in</Top>
         <Left>0.26333in</Left>
         <Height>0.5in</Height>
-        <Width>9.31667in</Width>
-        <ZIndex>1</ZIndex>
+        <Width>9.31668in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -490,31 +435,54 @@
   <Width>10.02167in</Width>
   <Page>
     <PageHeader>
-      <Height>1in</Height>
+      <Height>1.36667in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="Textbox1">
+        <Textbox Name="Textbox24">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>REPORTE DE CURSOS INSCRITOS POR ESTUDIANTE</Value>
+                  <Value>ESTUDIANTE: </Value>
                   <Style>
-                    <FontSize>18pt</FontSize>
+                    <FontSize>16pt</FontSize>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=Fields!NombreEstudiante.Value</Value>
+                  <Style>
+                    <FontSize>16pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>CEDULA:  </Value>
+                  <Style>
+                    <FontSize>16pt</FontSize>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=Fields!CedulaEstudiante.Value</Value>
+                  <Style>
+                    <FontSize>16pt</FontSize>
                   </Style>
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.47167in</Top>
-          <Left>1.33in</Left>
-          <Height>0.30833in</Height>
-          <Width>6.55in</Width>
+          <rd:DefaultName>Textbox24</rd:DefaultName>
+          <Top>0.18833in</Top>
+          <Left>0.26333in</Left>
+          <Height>0.63056in</Height>
+          <Width>6.51667in</Width>
           <Style>
             <Border>
               <Style>None</Style>

@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace SistemaCursosOnline.Models
 {
-    //estudiante_model IdEstudiante,Cedula,Nombre,Email,Telefono,FechaNacimiento,Direccion
     class estudiante_model
     {
         public int IdEstudiante { get; set; }

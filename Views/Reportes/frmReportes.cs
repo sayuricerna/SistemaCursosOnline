@@ -35,5 +35,9 @@ namespace SistemaCursosOnline.Views.Reportes
         {
 
         }
+
+        private void btnBuscarNombre_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

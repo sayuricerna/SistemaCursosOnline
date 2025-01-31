@@ -90,6 +90,12 @@ namespace SistemaCursosOnline.Views.Inscripciones
 
                 var controller = new inscripcion_controller();
 
+                if (!this.modoEdision && controller.verificarInscripcion(inscripcion.IdEstudiante, inscripcion.IdCurso))
+                {
+                    MessageBox.Show("Este estudiante ya está inscrito en este curso.");
+                    return;
+                }
+
                 if (!this.modoEdision)
                 {
                     var resultado = controller.Insertar(inscripcion);
@@ -131,20 +137,8 @@ namespace SistemaCursosOnline.Views.Inscripciones
 
         private void cmbEstudiantes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Verificar si se seleccionó un estudiante
             if (cmbEstudiantes.SelectedValue != null)
             {
-                // Obtener el estudiante seleccionado
-                //int estudianteId = (int)cmbEstudiantes.SelectedValue;
-                /*
-                int estudianteId = Convert.ToInt32(cmbEstudiantes.SelectedValue);
-                var estudianteController = new estudiante_controller();
-                var estudiante = estudianteController.ObtenerPorId(estudianteId);
-
-                // Actualizar el texto del lblEstudianteEncontrado con el nombre del estudiante
-                lblEstudianteEncontrado.Text = $"Estudiante: {estudiante.Nombre}";*/
-
-                    // Asegurar que el SelectedValue sea un int
                 if (int.TryParse(cmbEstudiantes.SelectedValue.ToString(), out int estudianteId))
                 {
                     var estudianteController = new estudiante_controller();

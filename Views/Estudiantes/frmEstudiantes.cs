@@ -12,7 +12,6 @@ using SistemaCursosOnline.Models;
 
 namespace SistemaCursosOnline.Views.Estudiantes
 {
-    //estudiante_model IdEstudiante,Cedula,Nombre,Email,Telefono,FechaNacimiento,Direccion
     public partial class frmEstudiantes : Form
     {
         public bool modoEdision = false;

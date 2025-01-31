@@ -16,11 +16,9 @@ namespace SistemaCursosOnline.Controllers
         {
             using (var conexion = cn.obtenerConexion())
             {
-                string query = "INSERT INTO Inscripcion (IdEstudiante, IdCurso, FechaInscripcion) VALUES ('" +
+                string query = "INSERT INTO Inscripcion (IdEstudiante, IdCurso) VALUES ('" +
                                inscripcion.IdEstudiante + "','" +
-                               inscripcion.IdCurso + "','" +
-                               inscripcion.FechaInscripcion.ToString("yyyy-MM-dd HH:mm:ss") + "')";
-
+                               inscripcion.IdCurso + "')";
                 using (var comando = new SqlCommand(query, conexion))
                 {
                     try
@@ -36,41 +34,12 @@ namespace SistemaCursosOnline.Controllers
                 }
             }
         }
-
-        /*
-        public string Insertar(inscripcion_model inscripcion)
-        {
-            using (var conexion = cn.obtenerConexion())
-            {
-                string query = "INSERT INTO Inscripcion (IdEstudiante, IdCurso, FechaInscripcion) " +
-                               "VALUES (@IdEstudiante, @IdCurso, @FechaInscripcion)";
-                using (var comando = new SqlCommand(query, conexion))
-                {
-                    comando.Parameters.AddWithValue("@IdEstudiante", inscripcion.IdEstudiante);
-                    comando.Parameters.AddWithValue("@IdCurso", inscripcion.IdCurso);
-                    comando.Parameters.AddWithValue("@FechaInscripcion", inscripcion.FechaInscripcion);
-
-                    try
-                    {
-                        conexion.Open();
-                        comando.ExecuteNonQuery();
-                        return "ok";
-                    }
-                    catch (Exception e)
-                    {
-                        return e.Message;
-                    }
-                }
-            }
-        }
-        */
 
         public List<inscripcion_model> ObtenerTodos()
         {
             var listaInscripciones = new List<inscripcion_model>();
             using (var conexion = cn.obtenerConexion())
             {
-                //string query = "SELECT IdInscripcion, IdEstudiante, IdCurso, FechaInscripcion FROM Inscripcion";
                 string query = "SELECT * FROM vistaInscripciones";
 
                 using (var comando = new SqlCommand(query, conexion))
@@ -88,8 +57,7 @@ namespace SistemaCursosOnline.Controllers
                                 NombreEstudiante = lector["NombreEstudiante"].ToString(),
                                 CedulaEstudiante = lector["CedulaEstudiante"].ToString(),
                                 NombreCurso = lector["NombreCurso"].ToString(),
-                                FechaInscripcion = Convert.ToDateTime(lector["FechaInscripcion"])
-                                //FechaInscripcion = (DateTime)lector["FechaInscripcion"]
+                                FechaInscripcion = (DateTime)lector["FechaInscripcion"]
                             };
                             listaInscripciones.Add(inscripcion);
                         }
@@ -104,7 +72,6 @@ namespace SistemaCursosOnline.Controllers
             using (var conexion = cn.obtenerConexion())
             {
                 string query = "SELECT * FROM vistaInscripciones WHERE IdInscripcion = @IdInscripcion";
-                //string query = "SELECT * FROM Inscripcion WHERE IdInscripcion = @IdInscripcion";
                 using (var comando = new SqlCommand(query, conexion))
                 {
                     comando.Parameters.AddWithValue("@IdInscripcion", id);
@@ -121,7 +88,7 @@ namespace SistemaCursosOnline.Controllers
                                 NombreEstudiante = lector["NombreEstudiante"].ToString(),
                                 CedulaEstudiante = lector["CedulaEstudiante"].ToString(),
                                 NombreCurso = lector["NombreCurso"].ToString(),
-                                FechaInscripcion = Convert.ToDateTime(lector["FechaInscripcion"])
+                                FechaInscripcion = (DateTime)lector["FechaInscripcion"]
                             };
                         }
                         return null;
@@ -134,15 +101,13 @@ namespace SistemaCursosOnline.Controllers
         {
             using (var conexion = cn.obtenerConexion())
             {
-                string query = "UPDATE Inscripcion SET IdEstudiante = @IdEstudiante, IdCurso = @IdCurso, " +
-                                //"FechaInscripcion = @FechaInscripcion WHERE IdInscripcion = @IdInscripcion";
-                                "WHERE IdInscripcion = @IdInscripcion";
 
+                string query = "UPDATE Inscripcion SET IdEstudiante = @IdEstudiante, IdCurso = @IdCurso" +
+                                " WHERE IdInscripcion = @IdInscripcion";
                 using (var comando = new SqlCommand(query, conexion))
                 {
                     comando.Parameters.AddWithValue("@IdEstudiante", inscripcion.IdEstudiante);
                     comando.Parameters.AddWithValue("@IdCurso", inscripcion.IdCurso);
-                    //comando.Parameters.AddWithValue("@FechaInscripcion", inscripcion.FechaInscripcion);
                     comando.Parameters.AddWithValue("@IdInscripcion", inscripcion.IdInscripcion);
 
                     try
@@ -191,12 +156,7 @@ namespace SistemaCursosOnline.Controllers
                "INNER JOIN Estudiante E ON I.IdEstudiante = E.IdEstudiante " +
                "INNER JOIN Curso C ON I.IdCurso = C.IdCurso " +
                "WHERE LOWER(E.Nombre) LIKE LOWER(@Texto) OR LOWER(E.Cedula) LIKE LOWER(@Texto)";
-                /*
-                 * string query = "SELECT I.IdInscripcion, I.IdEstudiante, I.IdCurso, I.FechaInscripcion " +
-                               "FROM Inscripcion I " +
-                               "INNER JOIN Estudiante E ON I.IdEstudiante = E.IdEstudiante " +
-                               "WHERE E.Nombre LIKE @Texto OR E.Cedula LIKE @Texto";
-                */
+
                 using (var comando = new SqlCommand(query, conexion))
                 {
                     comando.Parameters.AddWithValue("@Texto", "%" + texto + "%");
@@ -214,7 +174,7 @@ namespace SistemaCursosOnline.Controllers
                                 NombreEstudiante = lector["NombreEstudiante"].ToString(),
                                 CedulaEstudiante = lector["CedulaEstudiante"].ToString(),
                                 NombreCurso = lector["NombreCurso"].ToString(),
-                                FechaInscripcion = Convert.ToDateTime(lector["FechaInscripcion"])
+                                FechaInscripcion = (DateTime)lector["FechaInscripcion"]
                             });
                         }
                     }
@@ -223,34 +183,30 @@ namespace SistemaCursosOnline.Controllers
             return listaInscripciones;
         }
 
-        /*
-        public List<inscripcion_model> Buscar(int idEstudiante)
+        public bool verificarInscripcion(int idEstudiante, int idCurso)
         {
-            var listaInscripciones = new List<inscripcion_model>();
             using (var conexion = cn.obtenerConexion())
             {
-                string query = "SELECT * FROM Inscripcion WHERE IdEstudiante = @IdEstudiante";
+                string query = "SELECT COUNT(*) FROM Inscripcion WHERE IdEstudiante = @IdEstudiante AND IdCurso = @IdCurso";
+
                 using (var comando = new SqlCommand(query, conexion))
                 {
                     comando.Parameters.AddWithValue("@IdEstudiante", idEstudiante);
-                    conexion.Open();
-                    using (var lector = comando.ExecuteReader())
+                    comando.Parameters.AddWithValue("@IdCurso", idCurso);
+
+                    try
                     {
-                        while (lector.Read())
-                        {
-                            listaInscripciones.Add(new inscripcion_model
-                            {
-                                IdInscripcion = (int)lector["IdInscripcion"],
-                                IdEstudiante = (int)lector["IdEstudiante"],
-                                IdCurso = (int)lector["IdCurso"],
-                                FechaInscripcion = Convert.ToDateTime(lector["FechaInscripcion"])
-                            });
-                        }
+                        conexion.Open();
+                        int count = (int)comando.ExecuteScalar();
+                        return count > 0;
+                    }
+                    catch (Exception)
+                    {
+                        return false;
                     }
                 }
             }
-            return listaInscripciones;
         }
-        */
+
     }
 }

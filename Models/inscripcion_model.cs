@@ -10,7 +10,6 @@ namespace SistemaCursosOnline.Models
     {
         public int IdInscripcion { get; set; }
         public string NombreEstudiante { get; set; }
-
         public string CedulaEstudiante { get; set; }
         public string NombreCurso { get; set; }
         public int IdEstudiante { get; set; }

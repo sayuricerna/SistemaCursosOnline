@@ -48,7 +48,6 @@ namespace SistemaCursosOnline.Controllers
             using (var conexion = cn.obtenerConexion())
             {
                 string query = "SELECT * FROM vistaCursoConProfesor";
-                //string query = "SELECT * FROM Curso";
                 using (var comando = new SqlCommand(query, conexion))
                 {
                     conexion.Open();
@@ -64,7 +63,6 @@ namespace SistemaCursosOnline.Controllers
                                 FechaInicio = Convert.ToDateTime(lector["FechaInicio"]),
                                 FechaFin = Convert.ToDateTime(lector["FechaFin"]),
                                 IdProfesor = (int)lector["IdProfesor"],
-                                //agg
                                 NombreProfesor = lector["NombreProfesor"].ToString(),
 
 
@@ -168,7 +166,6 @@ namespace SistemaCursosOnline.Controllers
             using (var conexion = cn.obtenerConexion())
             {
                 string query = "SELECT * FROM vistaCursoConProfesor WHERE NombreCurso LIKE @Texto";
-                //string query = "SELECT * FROM curso WHERE NombreCurso LIKE @Texto";
                 using (var comando = new SqlCommand(query, conexion))
                 {
                     comando.Parameters.AddWithValue("@Texto", "%" + texto + "%");

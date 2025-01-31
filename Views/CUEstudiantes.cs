@@ -25,11 +25,6 @@ namespace SistemaCursosOnline.Views
             frm.ShowDialog();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void CUEstudiantes_Load(object sender, EventArgs e)
         {
             var logicaEstudiantes = new estudiante_controller();
@@ -154,6 +149,11 @@ namespace SistemaCursosOnline.Views
             {
                 dataGridView1.Rows[i].Cells[0].Value = i + 1;
             }
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            this.cargaGrilla(1);
         }
     }
 }

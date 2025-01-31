@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\sahil\\Desktop\\SistemaCursosOnline\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{232B507A-4A09-4BDB-B376-5C1E38C00B43}|SistemaCursosOnline.csproj|c:\\users\\sahil\\desktop\\sistemacursosonline\\controllers\\inscripcion_controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{232B507A-4A09-4BDB-B376-5C1E38C00B43}|SistemaCursosOnline.csproj|solutionrelative:controllers\\inscripcion_controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{232B507A-4A09-4BDB-B376-5C1E38C00B43}|SistemaCursosOnline.csproj|c:\\users\\sahil\\desktop\\sistemacursosonline\\views\\reportes\\frmreportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{232B507A-4A09-4BDB-B376-5C1E38C00B43}|SistemaCursosOnline.csproj|solutionrelative:views\\reportes\\frmreportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{232B507A-4A09-4BDB-B376-5C1E38C00B43}|SistemaCursosOnline.csproj|c:\\users\\sahil\\desktop\\sistemacursosonline\\models\\inscripcion_model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{232B507A-4A09-4BDB-B376-5C1E38C00B43}|SistemaCursosOnline.csproj|solutionrelative:models\\inscripcion_model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{232B507A-4A09-4BDB-B376-5C1E38C00B43}|SistemaCursosOnline.csproj|c:\\users\\sahil\\desktop\\sistemacursosonline\\views\\cuinscripciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{232B507A-4A09-4BDB-B376-5C1E38C00B43}|SistemaCursosOnline.csproj|solutionrelative:views\\cuinscripciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{232B507A-4A09-4BDB-B376-5C1E38C00B43}|SistemaCursosOnline.csproj|c:\\users\\sahil\\desktop\\sistemacursosonline\\views\\reportes\\report1.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "RelativeMoniker": "D:0:0:{232B507A-4A09-4BDB-B376-5C1E38C00B43}|SistemaCursosOnline.csproj|solutionrelative:views\\reportes\\report1.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{232B507A-4A09-4BDB-B376-5C1E38C00B43}|SistemaCursosOnline.csproj|c:\\users\\sahil\\desktop\\sistemacursosonline\\views\\inscripciones\\frminscripciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{232B507A-4A09-4BDB-B376-5C1E38C00B43}|SistemaCursosOnline.csproj|solutionrelative:views\\inscripciones\\frminscripciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{232B507A-4A09-4BDB-B376-5C1E38C00B43}|SistemaCursosOnline.csproj|c:\\users\\sahil\\desktop\\sistemacursosonline\\controllers\\inscripcion_controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{232B507A-4A09-4BDB-B376-5C1E38C00B43}|SistemaCursosOnline.csproj|solutionrelative:controllers\\inscripcion_controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{232B507A-4A09-4BDB-B376-5C1E38C00B43}|SistemaCursosOnline.csproj|c:\\users\\sahil\\desktop\\sistemacursosonline\\views\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{232B507A-4A09-4BDB-B376-5C1E38C00B43}|SistemaCursosOnline.csproj|solutionrelative:views\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{232B507A-4A09-4BDB-B376-5C1E38C00B43}|SistemaCursosOnline.csproj|c:\\users\\sahil\\desktop\\sistemacursosonline\\views\\reportes\\frmreportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{232B507A-4A09-4BDB-B376-5C1E38C00B43}|SistemaCursosOnline.csproj|solutionrelative:views\\reportes\\frmreportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,67 +34,86 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "frmReportes.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\sahil\\Desktop\\SistemaCursosOnline\\Views\\Reportes\\frmReportes.cs",
+              "RelativeDocumentMoniker": "Views\\Reportes\\frmReportes.cs",
+              "ToolTip": "C:\\Users\\sahil\\Desktop\\SistemaCursosOnline\\Views\\Reportes\\frmReportes.cs [Design]*",
+              "RelativeToolTip": "Views\\Reportes\\frmReportes.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T16:18:45.939Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Report1.rdlc [Design]",
+              "DocumentMoniker": "C:\\Users\\sahil\\Desktop\\SistemaCursosOnline\\Views\\Reportes\\Report1.rdlc",
+              "RelativeDocumentMoniker": "Views\\Reportes\\Report1.rdlc",
+              "ToolTip": "C:\\Users\\sahil\\Desktop\\SistemaCursosOnline\\Views\\Reportes\\Report1.rdlc [Design]",
+              "RelativeToolTip": "Views\\Reportes\\Report1.rdlc [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
+              "WhenOpened": "2025-01-31T16:17:44.331Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "inscripcion_controller.cs",
               "DocumentMoniker": "C:\\Users\\sahil\\Desktop\\SistemaCursosOnline\\Controllers\\inscripcion_controller.cs",
               "RelativeDocumentMoniker": "Controllers\\inscripcion_controller.cs",
               "ToolTip": "C:\\Users\\sahil\\Desktop\\SistemaCursosOnline\\Controllers\\inscripcion_controller.cs",
               "RelativeToolTip": "Controllers\\inscripcion_controller.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAwwGcAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAALYAAAAAAAAAAAAowM8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-31T11:01:21.462Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "inscripcion_model.cs",
-              "DocumentMoniker": "C:\\Users\\sahil\\Desktop\\SistemaCursosOnline\\Models\\inscripcion_model.cs",
-              "RelativeDocumentMoniker": "Models\\inscripcion_model.cs",
-              "ToolTip": "C:\\Users\\sahil\\Desktop\\SistemaCursosOnline\\Models\\inscripcion_model.cs",
-              "RelativeToolTip": "Models\\inscripcion_model.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-31T12:02:08.834Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmInscripciones.cs",
-              "DocumentMoniker": "C:\\Users\\sahil\\Desktop\\SistemaCursosOnline\\Views\\Inscripciones\\frmInscripciones.cs",
-              "RelativeDocumentMoniker": "Views\\Inscripciones\\frmInscripciones.cs",
-              "ToolTip": "C:\\Users\\sahil\\Desktop\\SistemaCursosOnline\\Views\\Inscripciones\\frmInscripciones.cs",
-              "RelativeToolTip": "Views\\Inscripciones\\frmInscripciones.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-31T11:03:05.838Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-01-31T16:13:36.074Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CUInscripciones.cs",
-              "DocumentMoniker": "C:\\Users\\sahil\\Desktop\\SistemaCursosOnline\\Views\\CUInscripciones.cs",
-              "RelativeDocumentMoniker": "Views\\CUInscripciones.cs",
-              "ToolTip": "C:\\Users\\sahil\\Desktop\\SistemaCursosOnline\\Views\\CUInscripciones.cs",
-              "RelativeToolTip": "Views\\CUInscripciones.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAowFIAAABEAAAAAAAAAA==",
+              "Title": "frmInscripciones.cs",
+              "DocumentMoniker": "C:\\Users\\sahil\\Desktop\\SistemaCursosOnline\\Views\\Inscripciones\\frmInscripciones.cs",
+              "RelativeDocumentMoniker": "Views\\Inscripciones\\frmInscripciones.cs",
+              "ToolTip": "C:\\Users\\sahil\\Desktop\\SistemaCursosOnline\\Views\\Inscripciones\\frmInscripciones.cs",
+              "RelativeToolTip": "Views\\Inscripciones\\frmInscripciones.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHEAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-31T11:03:11.886Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-01-31T16:11:06.658Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmReportes.cs",
+              "DocumentMoniker": "C:\\Users\\sahil\\Desktop\\SistemaCursosOnline\\Views\\Reportes\\frmReportes.cs",
+              "RelativeDocumentMoniker": "Views\\Reportes\\frmReportes.cs",
+              "ToolTip": "C:\\Users\\sahil\\Desktop\\SistemaCursosOnline\\Views\\Reportes\\frmReportes.cs*",
+              "RelativeToolTip": "Views\\Reportes\\frmReportes.cs*",
+              "ViewState": "AgIAABMAAAAAAAAAAIA5wB0AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T15:56:11.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MenuPrincipal.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\sahil\\Desktop\\SistemaCursosOnline\\Views\\MenuPrincipal.cs",
+              "RelativeDocumentMoniker": "Views\\MenuPrincipal.cs",
+              "ToolTip": "C:\\Users\\sahil\\Desktop\\SistemaCursosOnline\\Views\\MenuPrincipal.cs [Design]",
+              "RelativeToolTip": "Views\\MenuPrincipal.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T15:59:29.475Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

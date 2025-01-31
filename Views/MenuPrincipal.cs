@@ -49,11 +49,6 @@ namespace SistemaCursosOnline.Views
             pnlGeneral.Controls.Add(frmNueva);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnReportes_Click(object sender, EventArgs e)
         {
             Reportes.frmReportes frm = new Reportes.frmReportes();

@@ -14,7 +14,6 @@ namespace SistemaCursosOnline.Views.Cursos
 {
     public partial class frmCursos : Form
     {
-        //curso_model IdCurso, NombreCurso, Descripcion, FechaInicio, FechaFin, IdProfesor
         public bool modoEdision = false;
         public int id = 0;
         public frmCursos(string modo)

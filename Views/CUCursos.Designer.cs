@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -44,6 +46,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnActualizar);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.btnAgregar);
             this.panel1.Controls.Add(this.btnBuscar);
@@ -54,10 +58,31 @@
             this.panel1.Size = new System.Drawing.Size(1193, 167);
             this.panel1.TabIndex = 0;
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnActualizar.Image = global::SistemaCursosOnline.Properties.Resources.refresh;
+            this.btnActualizar.Location = new System.Drawing.Point(942, 70);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(90, 58);
+            this.btnActualizar.TabIndex = 8;
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(269, 25);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Buscar por Nombre del Curso";
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel4.Location = new System.Drawing.Point(35, 106);
+            this.panel4.Location = new System.Drawing.Point(14, 114);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(524, 10);
             this.panel4.TabIndex = 3;
@@ -69,7 +94,7 @@
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnAgregar.Image = global::SistemaCursosOnline.Properties.Resources.plus;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(828, 62);
+            this.btnAgregar.Location = new System.Drawing.Point(716, 70);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(220, 58);
             this.btnAgregar.TabIndex = 2;
@@ -84,9 +109,9 @@
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnBuscar.Image = global::SistemaCursosOnline.Properties.Resources.search__5_;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(565, 62);
+            this.btnBuscar.Location = new System.Drawing.Point(544, 70);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(229, 58);
+            this.btnBuscar.Size = new System.Drawing.Size(157, 58);
             this.btnBuscar.TabIndex = 1;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -98,7 +123,7 @@
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txtBuscar.Location = new System.Drawing.Point(35, 69);
+            this.txtBuscar.Location = new System.Drawing.Point(14, 77);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(524, 31);
             this.txtBuscar.TabIndex = 0;
@@ -114,6 +139,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -162,5 +188,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }

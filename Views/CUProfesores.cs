@@ -138,17 +138,16 @@ namespace SistemaCursosOnline.Views
         {
             this.cargaGrilla(2);
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void CUProfesores_Load(object sender, EventArgs e)
         {
             var logicaProfesor = new profesor_controller();
             dataGridView1.DataSource = "";
             dataGridView1.DataSource = logicaProfesor.ObtenerTodos();
+            this.cargaGrilla(1);
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
             this.cargaGrilla(1);
         }
     }

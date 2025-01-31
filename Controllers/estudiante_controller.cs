@@ -155,8 +155,6 @@ namespace SistemaCursosOnline.Controllers
                 }
             }
         }
-        //AGGREGADO 
-      
         public List<estudiante_model> Buscar(string texto)
         {
             var listaEstudiantes = new List<estudiante_model>();

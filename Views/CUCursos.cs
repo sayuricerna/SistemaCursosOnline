@@ -85,7 +85,6 @@ namespace SistemaCursosOnline.Views
             dataGridView1.Columns["Descripcion"].HeaderText = "Descripción";
             dataGridView1.Columns["FechaInicio"].HeaderText = "Fecha de Inicio";
             dataGridView1.Columns["FechaFin"].HeaderText = "Fecha de Fin";
-            //dataGridView1.Columns["IdProfesor"].HeaderText = "Cod";
             dataGridView1.Columns["IdProfesor"].Visible = false;
             dataGridView1.Columns["NombreProfesor"].HeaderText = "Profesor";
 
@@ -148,6 +147,11 @@ namespace SistemaCursosOnline.Views
             {
                 dataGridView1.Rows[i].Cells[0].Value = i + 1;
             }
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            this.cargaGrilla(1);
         }
     }
 }
