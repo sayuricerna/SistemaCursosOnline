@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SistemaCursosOnlineDataSet" targetNamespace="http://tempuri.org/SistemaCursosOnlineDataSet.xsd" xmlns:mstns="http://tempuri.org/SistemaCursosOnlineDataSet.xsd" xmlns="http://tempuri.org/SistemaCursosOnlineDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SistemaCursosOnlineConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SistemaCursosOnlineConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SistemaCursosOnline.Properties.Settings.GlobalReference.Default.SistemaCursosOnlineConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReporteCursosPorEstudianteTableAdapter" GeneratorDataComponentClassName="ReporteCursosPorEstudianteTableAdapter" Name="ReporteCursosPorEstudiante" UserDataComponentName="ReporteCursosPorEstudianteTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SistemaCursosOnlineConnectionString (Settings)" DbObjectName="SistemaCursosOnline.dbo.ReporteCursosPorEstudiante" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_estudiante, nombre_estudiante, email, id_curso, nombre_curso, fecha_inscripcion FROM dbo.ReporteCursosPorEstudiante</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_estudiante" DataSetColumn="id_estudiante" />
+              <Mapping SourceColumn="nombre_estudiante" DataSetColumn="nombre_estudiante" />
+              <Mapping SourceColumn="email" DataSetColumn="email" />
+              <Mapping SourceColumn="id_curso" DataSetColumn="id_curso" />
+              <Mapping SourceColumn="nombre_curso" DataSetColumn="nombre_curso" />
+              <Mapping SourceColumn="fecha_inscripcion" DataSetColumn="fecha_inscripcion" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SistemaCursosOnlineDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="SistemaCursosOnlineDataSet" msprop:Generator_DataSetName="SistemaCursosOnlineDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReporteCursosPorEstudiante" msprop:Generator_RowEvHandlerName="ReporteCursosPorEstudianteRowChangeEventHandler" msprop:Generator_RowDeletedName="ReporteCursosPorEstudianteRowDeleted" msprop:Generator_RowDeletingName="ReporteCursosPorEstudianteRowDeleting" msprop:Generator_RowEvArgName="ReporteCursosPorEstudianteRowChangeEvent" msprop:Generator_TablePropName="ReporteCursosPorEstudiante" msprop:Generator_RowChangedName="ReporteCursosPorEstudianteRowChanged" msprop:Generator_RowChangingName="ReporteCursosPorEstudianteRowChanging" msprop:Generator_TableClassName="ReporteCursosPorEstudianteDataTable" msprop:Generator_RowClassName="ReporteCursosPorEstudianteRow" msprop:Generator_TableVarName="tableReporteCursosPorEstudiante" msprop:Generator_UserTableName="ReporteCursosPorEstudiante">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_estudiante" msprop:Generator_ColumnPropNameInRow="id_estudiante" msprop:Generator_ColumnPropNameInTable="id_estudianteColumn" msprop:Generator_ColumnVarNameInTable="columnid_estudiante" msprop:Generator_UserColumnName="id_estudiante" type="xs:int" />
+              <xs:element name="nombre_estudiante" msprop:Generator_ColumnPropNameInRow="nombre_estudiante" msprop:Generator_ColumnPropNameInTable="nombre_estudianteColumn" msprop:Generator_ColumnVarNameInTable="columnnombre_estudiante" msprop:Generator_UserColumnName="nombre_estudiante">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_UserColumnName="email">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_curso" msprop:Generator_ColumnPropNameInRow="id_curso" msprop:Generator_ColumnPropNameInTable="id_cursoColumn" msprop:Generator_ColumnVarNameInTable="columnid_curso" msprop:Generator_UserColumnName="id_curso" type="xs:int" />
+              <xs:element name="nombre_curso" msprop:Generator_ColumnPropNameInRow="nombre_curso" msprop:Generator_ColumnPropNameInTable="nombre_cursoColumn" msprop:Generator_ColumnVarNameInTable="columnnombre_curso" msprop:Generator_UserColumnName="nombre_curso">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha_inscripcion" msprop:Generator_ColumnPropNameInRow="fecha_inscripcion" msprop:Generator_ColumnPropNameInTable="fecha_inscripcionColumn" msprop:Generator_ColumnVarNameInTable="columnfecha_inscripcion" msprop:Generator_UserColumnName="fecha_inscripcion" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
