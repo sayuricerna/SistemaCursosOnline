@@ -75,10 +75,13 @@ namespace SistemaCursosOnline.Views
             }
 
             // Modificar según los campos disponibles en el modelo de inscripción
-            dataGridView1.Columns["IdEstudiante"].HeaderText = "Estudiante";
-            dataGridView1.Columns["IdCurso"].HeaderText = "Curso";
-            dataGridView1.Columns["fechaInscripcion"].HeaderText = "Fecha Inscripción";
+            dataGridView1.Columns["IdEstudiante"].Visible = false;
+            dataGridView1.Columns["IdCurso"].Visible = false;
             dataGridView1.Columns["IdInscripcion"].Visible = false;
+            dataGridView1.Columns["fechaInscripcion"].HeaderText = "Fecha Inscripción";
+            dataGridView1.Columns["NombreEstudiante"].HeaderText = "Estudiante";
+            dataGridView1.Columns["NombreCurso"].HeaderText = "Curso";
+            dataGridView1.Columns["CedulaEstudiante"].HeaderText = "Cédula";
 
             dataGridView1.Columns.Add(btnEditar);
             dataGridView1.Columns.Add(btnEliminar);

@@ -36,7 +36,6 @@
             this.cmbEstudiantes = new System.Windows.Forms.ComboBox();
             this.cmbCursos = new System.Windows.Forms.ComboBox();
             this.lblEstudianteEncontrado = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -118,30 +117,18 @@
             // 
             this.lblEstudianteEncontrado.AutoSize = true;
             this.lblEstudianteEncontrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstudianteEncontrado.Location = new System.Drawing.Point(272, 170);
+            this.lblEstudianteEncontrado.Location = new System.Drawing.Point(235, 169);
             this.lblEstudianteEncontrado.Name = "lblEstudianteEncontrado";
             this.lblEstudianteEncontrado.Size = new System.Drawing.Size(23, 25);
             this.lblEstudianteEncontrado.TabIndex = 49;
             this.lblEstudianteEncontrado.Text = ": ";
             this.lblEstudianteEncontrado.Click += new System.EventHandler(this.lblEstudianteEncontrado_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(80, 170);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(178, 25);
-            this.label2.TabIndex = 50;
-            this.label2.Text = "Nombre Estudiante";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // frmInscripciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(859, 431);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblEstudianteEncontrado);
             this.Controls.Add(this.cmbCursos);
             this.Controls.Add(this.cmbEstudiantes);
@@ -167,6 +154,5 @@
         private System.Windows.Forms.ComboBox cmbEstudiantes;
         private System.Windows.Forms.ComboBox cmbCursos;
         private System.Windows.Forms.Label lblEstudianteEncontrado;
-        private System.Windows.Forms.Label label2;
     }
 }

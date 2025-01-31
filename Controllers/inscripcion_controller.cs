@@ -70,7 +70,9 @@ namespace SistemaCursosOnline.Controllers
             var listaInscripciones = new List<inscripcion_model>();
             using (var conexion = cn.obtenerConexion())
             {
-                string query = "SELECT IdInscripcion, IdEstudiante, IdCurso, FechaInscripcion FROM Inscripcion";
+                //string query = "SELECT IdInscripcion, IdEstudiante, IdCurso, FechaInscripcion FROM Inscripcion";
+                string query = "SELECT * FROM vistaInscripciones";
+
                 using (var comando = new SqlCommand(query, conexion))
                 {
                     conexion.Open();
@@ -83,9 +85,11 @@ namespace SistemaCursosOnline.Controllers
                                 IdInscripcion = (int)lector["IdInscripcion"],
                                 IdEstudiante = (int)lector["IdEstudiante"],
                                 IdCurso = (int)lector["IdCurso"],
-                                //FechaInscripcion = Convert.ToDateTime(lector["FechaInscripcion"])
-                                
-                                FechaInscripcion = (DateTime)lector["FechaInscripcion"]
+                                NombreEstudiante = lector["NombreEstudiante"].ToString(),
+                                CedulaEstudiante = lector["CedulaEstudiante"].ToString(),
+                                NombreCurso = lector["NombreCurso"].ToString(),
+                                FechaInscripcion = Convert.ToDateTime(lector["FechaInscripcion"])
+                                //FechaInscripcion = (DateTime)lector["FechaInscripcion"]
                             };
                             listaInscripciones.Add(inscripcion);
                         }
@@ -99,7 +103,8 @@ namespace SistemaCursosOnline.Controllers
         {
             using (var conexion = cn.obtenerConexion())
             {
-                string query = "SELECT * FROM Inscripcion WHERE IdInscripcion = @IdInscripcion";
+                string query = "SELECT * FROM vistaInscripciones WHERE IdInscripcion = @IdInscripcion";
+                //string query = "SELECT * FROM Inscripcion WHERE IdInscripcion = @IdInscripcion";
                 using (var comando = new SqlCommand(query, conexion))
                 {
                     comando.Parameters.AddWithValue("@IdInscripcion", id);
@@ -113,6 +118,9 @@ namespace SistemaCursosOnline.Controllers
                                 IdInscripcion = (int)lector["IdInscripcion"],
                                 IdEstudiante = (int)lector["IdEstudiante"],
                                 IdCurso = (int)lector["IdCurso"],
+                                NombreEstudiante = lector["NombreEstudiante"].ToString(),
+                                CedulaEstudiante = lector["CedulaEstudiante"].ToString(),
+                                NombreCurso = lector["NombreCurso"].ToString(),
                                 FechaInscripcion = Convert.ToDateTime(lector["FechaInscripcion"])
                             };
                         }
@@ -177,12 +185,18 @@ namespace SistemaCursosOnline.Controllers
             var listaInscripciones = new List<inscripcion_model>();
             using (var conexion = cn.obtenerConexion())
             {
-                // Ajustamos la consulta para que filtre por nombre o cédula sin cambiar el modelo
-                string query = "SELECT I.IdInscripcion, I.IdEstudiante, I.IdCurso, I.FechaInscripcion " +
+                string query = "SELECT I.IdInscripcion, I.IdEstudiante, I.IdCurso, I.FechaInscripcion, " +
+               "E.Nombre AS NombreEstudiante, E.Cedula AS CedulaEstudiante, C.NombreCurso " +
+               "FROM Inscripcion I " +
+               "INNER JOIN Estudiante E ON I.IdEstudiante = E.IdEstudiante " +
+               "INNER JOIN Curso C ON I.IdCurso = C.IdCurso " +
+               "WHERE LOWER(E.Nombre) LIKE LOWER(@Texto) OR LOWER(E.Cedula) LIKE LOWER(@Texto)";
+                /*
+                 * string query = "SELECT I.IdInscripcion, I.IdEstudiante, I.IdCurso, I.FechaInscripcion " +
                                "FROM Inscripcion I " +
                                "INNER JOIN Estudiante E ON I.IdEstudiante = E.IdEstudiante " +
                                "WHERE E.Nombre LIKE @Texto OR E.Cedula LIKE @Texto";
-
+                */
                 using (var comando = new SqlCommand(query, conexion))
                 {
                     comando.Parameters.AddWithValue("@Texto", "%" + texto + "%");
@@ -197,6 +211,9 @@ namespace SistemaCursosOnline.Controllers
                                 IdInscripcion = (int)lector["IdInscripcion"],
                                 IdEstudiante = (int)lector["IdEstudiante"],
                                 IdCurso = (int)lector["IdCurso"],
+                                NombreEstudiante = lector["NombreEstudiante"].ToString(),
+                                CedulaEstudiante = lector["CedulaEstudiante"].ToString(),
+                                NombreCurso = lector["NombreCurso"].ToString(),
                                 FechaInscripcion = Convert.ToDateTime(lector["FechaInscripcion"])
                             });
                         }

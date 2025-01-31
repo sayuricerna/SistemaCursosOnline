@@ -47,8 +47,8 @@ namespace SistemaCursosOnline.Controllers
             var listaCursos = new List<curso_model>();
             using (var conexion = cn.obtenerConexion())
             {
-
-                string query = "SELECT * FROM Curso";
+                string query = "SELECT * FROM vistaCursoConProfesor";
+                //string query = "SELECT * FROM Curso";
                 using (var comando = new SqlCommand(query, conexion))
                 {
                     conexion.Open();
@@ -64,6 +64,9 @@ namespace SistemaCursosOnline.Controllers
                                 FechaInicio = Convert.ToDateTime(lector["FechaInicio"]),
                                 FechaFin = Convert.ToDateTime(lector["FechaFin"]),
                                 IdProfesor = (int)lector["IdProfesor"],
+                                //agg
+                                NombreProfesor = lector["NombreProfesor"].ToString(),
+
 
                             };
                             listaCursos.Add(curso);
@@ -79,7 +82,7 @@ namespace SistemaCursosOnline.Controllers
         {
             using (var conexion = cn.obtenerConexion())
             {
-                string query = "SELECT * FROM Curso WHERE IdCurso = @IdCurso";
+                string query = "SELECT * FROM vistaCursoConProfesor WHERE IdCurso = @IdCurso";
                 using (var comando = new SqlCommand(query, conexion))
                 {
                     comando.Parameters.AddWithValue("@IdCurso", id);
@@ -95,7 +98,10 @@ namespace SistemaCursosOnline.Controllers
                                 Descripcion = lector["Descripcion"].ToString(),
                                 FechaInicio = Convert.ToDateTime(lector["FechaInicio"]),
                                 FechaFin = Convert.ToDateTime(lector["FechaFin"]),
-                                IdProfesor = (int)lector["IdProfesor"]
+                                IdProfesor = (int)lector["IdProfesor"],
+                                NombreProfesor = lector["NombreProfesor"].ToString(),
+
+
                             };
                         }
                         return null;
@@ -161,7 +167,8 @@ namespace SistemaCursosOnline.Controllers
             var listaCursos = new List<curso_model>();
             using (var conexion = cn.obtenerConexion())
             {
-                string query = "SELECT * FROM Curso WHERE NombreCurso LIKE @Texto";
+                string query = "SELECT * FROM vistaCursoConProfesor WHERE NombreCurso LIKE @Texto";
+                //string query = "SELECT * FROM curso WHERE NombreCurso LIKE @Texto";
                 using (var comando = new SqlCommand(query, conexion))
                 {
                     comando.Parameters.AddWithValue("@Texto", "%" + texto + "%");
@@ -177,7 +184,8 @@ namespace SistemaCursosOnline.Controllers
                                 Descripcion = lector["Descripcion"].ToString(),
                                 FechaInicio = Convert.ToDateTime(lector["FechaInicio"]),
                                 FechaFin = Convert.ToDateTime(lector["FechaFin"]),
-                                IdProfesor = (int)lector["IdProfesor"]
+                                IdProfesor = (int)lector["IdProfesor"],
+                                NombreProfesor = lector["NombreProfesor"].ToString(),
                             });
                         }
                     }
