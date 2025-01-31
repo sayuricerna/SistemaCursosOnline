@@ -99,6 +99,7 @@
             this.cmbEstudiantes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEstudiantes.FormattingEnabled = true;
             this.cmbEstudiantes.Location = new System.Drawing.Point(277, 92);
+            this.cmbEstudiantes.MaxLength = 10;
             this.cmbEstudiantes.Name = "cmbEstudiantes";
             this.cmbEstudiantes.Size = new System.Drawing.Size(396, 33);
             this.cmbEstudiantes.TabIndex = 46;

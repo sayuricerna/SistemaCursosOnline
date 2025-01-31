@@ -75,6 +75,7 @@
             // 
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.Location = new System.Drawing.Point(268, 322);
+            this.txtDireccion.MaxLength = 98;
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(391, 82);
@@ -112,6 +113,7 @@
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(268, 121);
+            this.txtNombre.MaxLength = 48;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(391, 30);
             this.txtNombre.TabIndex = 23;
@@ -130,6 +132,7 @@
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.Location = new System.Drawing.Point(268, 217);
+            this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(391, 30);
             this.txtTelefono.TabIndex = 21;
@@ -149,6 +152,7 @@
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(268, 168);
+            this.txtEmail.MaxLength = 28;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(391, 30);
             this.txtEmail.TabIndex = 19;
@@ -167,6 +171,7 @@
             // 
             this.txtCedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCedula.Location = new System.Drawing.Point(268, 80);
+            this.txtCedula.MaxLength = 10;
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(391, 30);
             this.txtCedula.TabIndex = 17;
