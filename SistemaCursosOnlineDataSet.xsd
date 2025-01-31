@@ -7,66 +7,119 @@
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SistemaCursosOnlineConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SistemaCursosOnlineConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SistemaCursosOnline.Properties.Settings.GlobalReference.Default.SistemaCursosOnlineConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReporteCursosPorEstudianteTableAdapter" GeneratorDataComponentClassName="ReporteCursosPorEstudianteTableAdapter" Name="ReporteCursosPorEstudiante" UserDataComponentName="ReporteCursosPorEstudianteTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VistaCursosTableAdapter" GeneratorDataComponentClassName="VistaCursosTableAdapter" Name="VistaCursos" UserDataComponentName="VistaCursosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SistemaCursosOnlineConnectionString (Settings)" DbObjectName="SistemaCursosOnline.dbo.ReporteCursosPorEstudiante" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SistemaCursosOnlineConnectionString (Settings)" DbObjectName="SistemaCursosOnline.dbo.VistaCursos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT id_estudiante, nombre_estudiante, email, id_curso, nombre_curso, fecha_inscripcion FROM dbo.ReporteCursosPorEstudiante</CommandText>
+                    <CommandText>SELECT IdCurso, NombreCurso, Descripcion, FechaInicio, FechaFin, NombreProfesor FROM dbo.VistaCursos</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="id_estudiante" DataSetColumn="id_estudiante" />
-              <Mapping SourceColumn="nombre_estudiante" DataSetColumn="nombre_estudiante" />
-              <Mapping SourceColumn="email" DataSetColumn="email" />
-              <Mapping SourceColumn="id_curso" DataSetColumn="id_curso" />
-              <Mapping SourceColumn="nombre_curso" DataSetColumn="nombre_curso" />
-              <Mapping SourceColumn="fecha_inscripcion" DataSetColumn="fecha_inscripcion" />
+              <Mapping SourceColumn="IdCurso" DataSetColumn="IdCurso" />
+              <Mapping SourceColumn="NombreCurso" DataSetColumn="NombreCurso" />
+              <Mapping SourceColumn="Descripcion" DataSetColumn="Descripcion" />
+              <Mapping SourceColumn="FechaInicio" DataSetColumn="FechaInicio" />
+              <Mapping SourceColumn="FechaFin" DataSetColumn="FechaFin" />
+              <Mapping SourceColumn="NombreProfesor" DataSetColumn="NombreProfesor" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="SistemaCursosOnlineConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByStudentCedula" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByStudentCedula" GeneratorSourceName="FillByStudentCedula" GetMethodModifier="Public" GetMethodName="GetDataByStudentCedula" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByStudentCedula" UserSourceName="FillByStudentCedula">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>    SELECT 
+        e.Nombre AS NombreEstudiante,
+        e.Cedula AS CedulaEstudiante,
+        c.IdCurso,
+        c.NombreCurso,
+        c.Descripcion,
+        c.FechaInicio,
+        c.FechaFin,
+        p.Nombre AS NombreProfesor,
+        i.FechaInscripcion
+    FROM Inscripcion i
+    INNER JOIN Estudiante e ON i.IdEstudiante = e.IdEstudiante
+    INNER JOIN Curso c ON i.IdCurso = c.IdCurso
+    INNER JOIN Profesor p ON c.IdProfesor = p.IdProfesor
+    WHERE e.Cedula = @CedulaEstudiante;</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="CedulaEstudiante" ColumnName="cedula" DataSourceName="SistemaCursosOnline.dbo.Estudiante" DataTypeServer="nvarchar(10)" DbType="String" Direction="Input" ParameterName="@CedulaEstudiante" Precision="0" ProviderType="NVarChar" Scale="0" Size="10" SourceColumn="CedulaEstudiante" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SistemaCursosOnlineConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByStudentName" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByStudentName" GeneratorSourceName="FillByStudentName" GetMethodModifier="Public" GetMethodName="GetDataByStudentName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByStudentName" UserSourceName="FillByStudentName">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT 
+        e.Nombre AS NombreEstudiante,
+        e.Cedula AS CedulaEstudiante,
+        c.IdCurso,
+        c.NombreCurso,
+        c.Descripcion,
+        c.FechaInicio,
+        c.FechaFin,
+        p.Nombre AS NombreProfesor,
+        i.FechaInscripcion
+    FROM Inscripcion i
+    INNER JOIN Estudiante e ON i.IdEstudiante = e.IdEstudiante
+    INNER JOIN Curso c ON i.IdCurso = c.IdCurso
+    INNER JOIN Profesor p ON c.IdProfesor = p.IdProfesor
+    WHERE e.Nombre LIKE '%' + @NombreEstudiante + '%';</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="NombreEstudiante" ColumnName="nombre" DataSourceName="SistemaCursosOnline.dbo.Estudiante" DataTypeServer="nvarchar(30)" DbType="String" Direction="Input" ParameterName="@NombreEstudiante" Precision="0" ProviderType="NVarChar" Scale="0" Size="30" SourceColumn="NombreEstudiante" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="SistemaCursosOnlineDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="SistemaCursosOnlineDataSet" msprop:Generator_DataSetName="SistemaCursosOnlineDataSet">
+  <xs:element name="SistemaCursosOnlineDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="SistemaCursosOnlineDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SistemaCursosOnlineDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ReporteCursosPorEstudiante" msprop:Generator_RowEvHandlerName="ReporteCursosPorEstudianteRowChangeEventHandler" msprop:Generator_RowDeletedName="ReporteCursosPorEstudianteRowDeleted" msprop:Generator_RowDeletingName="ReporteCursosPorEstudianteRowDeleting" msprop:Generator_RowEvArgName="ReporteCursosPorEstudianteRowChangeEvent" msprop:Generator_TablePropName="ReporteCursosPorEstudiante" msprop:Generator_RowChangedName="ReporteCursosPorEstudianteRowChanged" msprop:Generator_RowChangingName="ReporteCursosPorEstudianteRowChanging" msprop:Generator_TableClassName="ReporteCursosPorEstudianteDataTable" msprop:Generator_RowClassName="ReporteCursosPorEstudianteRow" msprop:Generator_TableVarName="tableReporteCursosPorEstudiante" msprop:Generator_UserTableName="ReporteCursosPorEstudiante">
+        <xs:element name="VistaCursos" msprop:Generator_RowClassName="VistaCursosRow" msprop:Generator_RowEvHandlerName="VistaCursosRowChangeEventHandler" msprop:Generator_RowDeletedName="VistaCursosRowDeleted" msprop:Generator_RowDeletingName="VistaCursosRowDeleting" msprop:Generator_RowEvArgName="VistaCursosRowChangeEvent" msprop:Generator_TablePropName="VistaCursos" msprop:Generator_RowChangedName="VistaCursosRowChanged" msprop:Generator_UserTableName="VistaCursos" msprop:Generator_RowChangingName="VistaCursosRowChanging" msprop:Generator_TableClassName="VistaCursosDataTable" msprop:Generator_TableVarName="tableVistaCursos">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id_estudiante" msprop:Generator_ColumnPropNameInRow="id_estudiante" msprop:Generator_ColumnPropNameInTable="id_estudianteColumn" msprop:Generator_ColumnVarNameInTable="columnid_estudiante" msprop:Generator_UserColumnName="id_estudiante" type="xs:int" />
-              <xs:element name="nombre_estudiante" msprop:Generator_ColumnPropNameInRow="nombre_estudiante" msprop:Generator_ColumnPropNameInTable="nombre_estudianteColumn" msprop:Generator_ColumnVarNameInTable="columnnombre_estudiante" msprop:Generator_UserColumnName="nombre_estudiante">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="30" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="email" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_UserColumnName="email">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="30" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="id_curso" msprop:Generator_ColumnPropNameInRow="id_curso" msprop:Generator_ColumnPropNameInTable="id_cursoColumn" msprop:Generator_ColumnVarNameInTable="columnid_curso" msprop:Generator_UserColumnName="id_curso" type="xs:int" />
-              <xs:element name="nombre_curso" msprop:Generator_ColumnPropNameInRow="nombre_curso" msprop:Generator_ColumnPropNameInTable="nombre_cursoColumn" msprop:Generator_ColumnVarNameInTable="columnnombre_curso" msprop:Generator_UserColumnName="nombre_curso">
+              <xs:element name="IdCurso" msprop:Generator_UserColumnName="IdCurso" msprop:Generator_ColumnPropNameInTable="IdCursoColumn" msprop:Generator_ColumnPropNameInRow="IdCurso" msprop:Generator_ColumnVarNameInTable="columnIdCurso" type="xs:int" />
+              <xs:element name="NombreCurso" msprop:Generator_UserColumnName="NombreCurso" msprop:Generator_ColumnPropNameInTable="NombreCursoColumn" msprop:Generator_ColumnPropNameInRow="NombreCurso" msprop:Generator_ColumnVarNameInTable="columnNombreCurso">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="fecha_inscripcion" msprop:Generator_ColumnPropNameInRow="fecha_inscripcion" msprop:Generator_ColumnPropNameInTable="fecha_inscripcionColumn" msprop:Generator_ColumnVarNameInTable="columnfecha_inscripcion" msprop:Generator_UserColumnName="fecha_inscripcion" type="xs:dateTime" />
+              <xs:element name="Descripcion" msprop:Generator_UserColumnName="Descripcion" msprop:Generator_ColumnPropNameInTable="DescripcionColumn" msprop:Generator_ColumnPropNameInRow="Descripcion" msprop:Generator_ColumnVarNameInTable="columnDescripcion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FechaInicio" msprop:Generator_UserColumnName="FechaInicio" msprop:Generator_ColumnPropNameInTable="FechaInicioColumn" msprop:Generator_ColumnPropNameInRow="FechaInicio" msprop:Generator_ColumnVarNameInTable="columnFechaInicio" type="xs:dateTime" />
+              <xs:element name="FechaFin" msprop:Generator_UserColumnName="FechaFin" msprop:Generator_ColumnPropNameInTable="FechaFinColumn" msprop:Generator_ColumnPropNameInRow="FechaFin" msprop:Generator_ColumnVarNameInTable="columnFechaFin" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NombreProfesor" msprop:Generator_UserColumnName="NombreProfesor" msprop:Generator_ColumnPropNameInTable="NombreProfesorColumn" msprop:Generator_ColumnPropNameInRow="NombreProfesor" msprop:Generator_ColumnVarNameInTable="columnNombreProfesor">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:choice>
     </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:VistaCursos" />
+      <xs:field xpath="mstns:IdCurso" />
+    </xs:unique>
   </xs:element>
 </xs:schema>

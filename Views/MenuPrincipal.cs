@@ -53,5 +53,12 @@ namespace SistemaCursosOnline.Views
         {
 
         }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            Reportes.frmReportes frm = new Reportes.frmReportes();
+            frm.Text = "Reportes de Cursos por Estudiante";
+            frm.ShowDialog();
+        }
     }
 }

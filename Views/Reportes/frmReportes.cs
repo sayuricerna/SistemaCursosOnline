@@ -19,8 +19,21 @@ namespace SistemaCursosOnline.Views.Reportes
 
         private void frmReportes_Load(object sender, EventArgs e)
         {
-
+            // TODO: This line of code loads data into the 'sistemaCursosOnlineDataSet.VistaCursos' table. You can move, or remove it, as needed.
+            this.vistaCursosTableAdapter.Fill(this.sistemaCursosOnlineDataSet.VistaCursos);
             this.reportViewer1.RefreshReport();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            //this.vistaCursosTableAdapter.FillByStudentName(this.sistemaCursosOnlineDataSet.VistaCursos, txtBuscar.Text);
+            this.vistaCursosTableAdapter.FillByStudentCedula(this.sistemaCursosOnlineDataSet.VistaCursos, txtBuscar.Text);
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

@@ -29,22 +29,24 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlGeneral = new System.Windows.Forms.Panel();
             this.btnProfesores = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnInscripciones = new System.Windows.Forms.Button();
             this.btnEstudiantes = new System.Windows.Forms.Button();
             this.btnCursos = new System.Windows.Forms.Button();
+            this.pnlGeneral = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnReportes = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.pnlGeneral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlGeneral.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.CadetBlue;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.btnReportes);
             this.panel1.Controls.Add(this.btnProfesores);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnInscripciones);
@@ -55,16 +57,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(403, 964);
             this.panel1.TabIndex = 0;
-            // 
-            // pnlGeneral
-            // 
-            this.pnlGeneral.Controls.Add(this.label1);
-            this.pnlGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlGeneral.Location = new System.Drawing.Point(403, 0);
-            this.pnlGeneral.Name = "pnlGeneral";
-            this.pnlGeneral.Size = new System.Drawing.Size(1097, 964);
-            this.pnlGeneral.TabIndex = 1;
-            this.pnlGeneral.MouseHover += new System.EventHandler(this.btnCursos_Click);
             // 
             // btnProfesores
             // 
@@ -137,6 +129,16 @@
             this.btnCursos.UseVisualStyleBackColor = false;
             this.btnCursos.Click += new System.EventHandler(this.btnCursos_Click);
             // 
+            // pnlGeneral
+            // 
+            this.pnlGeneral.Controls.Add(this.label1);
+            this.pnlGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlGeneral.Location = new System.Drawing.Point(403, 0);
+            this.pnlGeneral.Name = "pnlGeneral";
+            this.pnlGeneral.Size = new System.Drawing.Size(1097, 964);
+            this.pnlGeneral.TabIndex = 1;
+            this.pnlGeneral.MouseHover += new System.EventHandler(this.btnCursos_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -146,6 +148,20 @@
             this.label1.Size = new System.Drawing.Size(430, 91);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bienvenido";
+            // 
+            // btnReportes
+            // 
+            this.btnReportes.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportes.Location = new System.Drawing.Point(22, 800);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(354, 93);
+            this.btnReportes.TabIndex = 5;
+            this.btnReportes.Text = "Reportes";
+            this.btnReportes.UseVisualStyleBackColor = false;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // MenuPrincipal
             // 
@@ -157,9 +173,9 @@
             this.Name = "MenuPrincipal";
             this.Text = "MenuPrincipal";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlGeneral.ResumeLayout(false);
             this.pnlGeneral.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -174,5 +190,6 @@
         private System.Windows.Forms.Button btnCursos;
         private System.Windows.Forms.Button btnProfesores;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnReportes;
     }
 }

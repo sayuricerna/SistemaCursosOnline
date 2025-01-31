@@ -20,17 +20,17 @@ namespace SistemaCursosOnline {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("SistemaCursosOnlineDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("SistemaCursosOnlineDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class SistemaCursosOnlineDataSet : global::System.Data.DataSet {
+    public partial class SistemaCursosOnlineDataSet1 : global::System.Data.DataSet {
         
-        private VistaCursosDataTable tableVistaCursos;
+        private FilterByStudentNameDataTable tableFilterByStudentName;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public SistemaCursosOnlineDataSet() {
+        public SistemaCursosOnlineDataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace SistemaCursosOnline {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected SistemaCursosOnlineDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected SistemaCursosOnlineDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace SistemaCursosOnline {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["VistaCursos"] != null)) {
-                    base.Tables.Add(new VistaCursosDataTable(ds.Tables["VistaCursos"]));
+                if ((ds.Tables["FilterByStudentName"] != null)) {
+                    base.Tables.Add(new FilterByStudentNameDataTable(ds.Tables["FilterByStudentName"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace SistemaCursosOnline {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public VistaCursosDataTable VistaCursos {
+        public FilterByStudentNameDataTable FilterByStudentName {
             get {
-                return this.tableVistaCursos;
+                return this.tableFilterByStudentName;
             }
         }
         
@@ -127,7 +127,7 @@ namespace SistemaCursosOnline {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            SistemaCursosOnlineDataSet cln = ((SistemaCursosOnlineDataSet)(base.Clone()));
+            SistemaCursosOnlineDataSet1 cln = ((SistemaCursosOnlineDataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace SistemaCursosOnline {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["VistaCursos"] != null)) {
-                    base.Tables.Add(new VistaCursosDataTable(ds.Tables["VistaCursos"]));
+                if ((ds.Tables["FilterByStudentName"] != null)) {
+                    base.Tables.Add(new FilterByStudentNameDataTable(ds.Tables["FilterByStudentName"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace SistemaCursosOnline {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableVistaCursos = ((VistaCursosDataTable)(base.Tables["VistaCursos"]));
+            this.tableFilterByStudentName = ((FilterByStudentNameDataTable)(base.Tables["FilterByStudentName"]));
             if ((initTable == true)) {
-                if ((this.tableVistaCursos != null)) {
-                    this.tableVistaCursos.InitVars();
+                if ((this.tableFilterByStudentName != null)) {
+                    this.tableFilterByStudentName.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace SistemaCursosOnline {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "SistemaCursosOnlineDataSet";
+            this.DataSetName = "SistemaCursosOnlineDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/SistemaCursosOnlineDataSet.xsd";
+            this.Namespace = "http://tempuri.org/SistemaCursosOnlineDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableVistaCursos = new VistaCursosDataTable();
-            base.Tables.Add(this.tableVistaCursos);
+            this.tableFilterByStudentName = new FilterByStudentNameDataTable();
+            base.Tables.Add(this.tableFilterByStudentName);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeVistaCursos() {
+        private bool ShouldSerializeFilterByStudentName() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace SistemaCursosOnline {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            SistemaCursosOnlineDataSet ds = new SistemaCursosOnlineDataSet();
+            SistemaCursosOnlineDataSet1 ds = new SistemaCursosOnlineDataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,14 +270,18 @@ namespace SistemaCursosOnline {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void VistaCursosRowChangeEventHandler(object sender, VistaCursosRowChangeEvent e);
+        public delegate void FilterByStudentNameRowChangeEventHandler(object sender, FilterByStudentNameRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class VistaCursosDataTable : global::System.Data.TypedTableBase<VistaCursosRow> {
+        public partial class FilterByStudentNameDataTable : global::System.Data.TypedTableBase<FilterByStudentNameRow> {
+            
+            private global::System.Data.DataColumn columnNombreEstudiante;
+            
+            private global::System.Data.DataColumn columnCedulaEstudiante;
             
             private global::System.Data.DataColumn columnIdCurso;
             
@@ -291,10 +295,12 @@ namespace SistemaCursosOnline {
             
             private global::System.Data.DataColumn columnNombreProfesor;
             
+            private global::System.Data.DataColumn columnFechaInscripcion;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public VistaCursosDataTable() {
-                this.TableName = "VistaCursos";
+            public FilterByStudentNameDataTable() {
+                this.TableName = "FilterByStudentName";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -302,7 +308,7 @@ namespace SistemaCursosOnline {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal VistaCursosDataTable(global::System.Data.DataTable table) {
+            internal FilterByStudentNameDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -319,9 +325,25 @@ namespace SistemaCursosOnline {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected VistaCursosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected FilterByStudentNameDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NombreEstudianteColumn {
+                get {
+                    return this.columnNombreEstudiante;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CedulaEstudianteColumn {
+                get {
+                    return this.columnCedulaEstudiante;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -374,6 +396,14 @@ namespace SistemaCursosOnline {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FechaInscripcionColumn {
+                get {
+                    return this.columnFechaInscripcion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -383,57 +413,60 @@ namespace SistemaCursosOnline {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public VistaCursosRow this[int index] {
+            public FilterByStudentNameRow this[int index] {
                 get {
-                    return ((VistaCursosRow)(this.Rows[index]));
+                    return ((FilterByStudentNameRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event VistaCursosRowChangeEventHandler VistaCursosRowChanging;
+            public event FilterByStudentNameRowChangeEventHandler FilterByStudentNameRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event VistaCursosRowChangeEventHandler VistaCursosRowChanged;
+            public event FilterByStudentNameRowChangeEventHandler FilterByStudentNameRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event VistaCursosRowChangeEventHandler VistaCursosRowDeleting;
+            public event FilterByStudentNameRowChangeEventHandler FilterByStudentNameRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event VistaCursosRowChangeEventHandler VistaCursosRowDeleted;
+            public event FilterByStudentNameRowChangeEventHandler FilterByStudentNameRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddVistaCursosRow(VistaCursosRow row) {
+            public void AddFilterByStudentNameRow(FilterByStudentNameRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public VistaCursosRow AddVistaCursosRow(int IdCurso, string NombreCurso, string Descripcion, System.DateTime FechaInicio, System.DateTime FechaFin, string NombreProfesor) {
-                VistaCursosRow rowVistaCursosRow = ((VistaCursosRow)(this.NewRow()));
+            public FilterByStudentNameRow AddFilterByStudentNameRow(string NombreEstudiante, string CedulaEstudiante, string NombreCurso, string Descripcion, System.DateTime FechaInicio, System.DateTime FechaFin, string NombreProfesor, System.DateTime FechaInscripcion) {
+                FilterByStudentNameRow rowFilterByStudentNameRow = ((FilterByStudentNameRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        IdCurso,
+                        NombreEstudiante,
+                        CedulaEstudiante,
+                        null,
                         NombreCurso,
                         Descripcion,
                         FechaInicio,
                         FechaFin,
-                        NombreProfesor};
-                rowVistaCursosRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowVistaCursosRow);
-                return rowVistaCursosRow;
+                        NombreProfesor,
+                        FechaInscripcion};
+                rowFilterByStudentNameRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFilterByStudentNameRow);
+                return rowFilterByStudentNameRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public VistaCursosRow FindByIdCurso(int IdCurso) {
-                return ((VistaCursosRow)(this.Rows.Find(new object[] {
+            public FilterByStudentNameRow FindByIdCurso(int IdCurso) {
+                return ((FilterByStudentNameRow)(this.Rows.Find(new object[] {
                             IdCurso})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                VistaCursosDataTable cln = ((VistaCursosDataTable)(base.Clone()));
+                FilterByStudentNameDataTable cln = ((FilterByStudentNameDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -441,23 +474,30 @@ namespace SistemaCursosOnline {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new VistaCursosDataTable();
+                return new FilterByStudentNameDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
+                this.columnNombreEstudiante = base.Columns["NombreEstudiante"];
+                this.columnCedulaEstudiante = base.Columns["CedulaEstudiante"];
                 this.columnIdCurso = base.Columns["IdCurso"];
                 this.columnNombreCurso = base.Columns["NombreCurso"];
                 this.columnDescripcion = base.Columns["Descripcion"];
                 this.columnFechaInicio = base.Columns["FechaInicio"];
                 this.columnFechaFin = base.Columns["FechaFin"];
                 this.columnNombreProfesor = base.Columns["NombreProfesor"];
+                this.columnFechaInscripcion = base.Columns["FechaInscripcion"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
+                this.columnNombreEstudiante = new global::System.Data.DataColumn("NombreEstudiante", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombreEstudiante);
+                this.columnCedulaEstudiante = new global::System.Data.DataColumn("CedulaEstudiante", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCedulaEstudiante);
                 this.columnIdCurso = new global::System.Data.DataColumn("IdCurso", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIdCurso);
                 this.columnNombreCurso = new global::System.Data.DataColumn("NombreCurso", typeof(string), null, global::System.Data.MappingType.Element);
@@ -470,9 +510,17 @@ namespace SistemaCursosOnline {
                 base.Columns.Add(this.columnFechaFin);
                 this.columnNombreProfesor = new global::System.Data.DataColumn("NombreProfesor", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombreProfesor);
+                this.columnFechaInscripcion = new global::System.Data.DataColumn("FechaInscripcion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFechaInscripcion);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIdCurso}, true));
+                this.columnNombreEstudiante.AllowDBNull = false;
+                this.columnNombreEstudiante.MaxLength = 30;
+                this.columnCedulaEstudiante.AllowDBNull = false;
+                this.columnCedulaEstudiante.MaxLength = 10;
+                this.columnIdCurso.AutoIncrement = true;
                 this.columnIdCurso.AllowDBNull = false;
+                this.columnIdCurso.ReadOnly = true;
                 this.columnIdCurso.Unique = true;
                 this.columnNombreCurso.AllowDBNull = false;
                 this.columnNombreCurso.MaxLength = 20;
@@ -480,32 +528,33 @@ namespace SistemaCursosOnline {
                 this.columnFechaInicio.AllowDBNull = false;
                 this.columnNombreProfesor.AllowDBNull = false;
                 this.columnNombreProfesor.MaxLength = 50;
+                this.columnFechaInscripcion.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public VistaCursosRow NewVistaCursosRow() {
-                return ((VistaCursosRow)(this.NewRow()));
+            public FilterByStudentNameRow NewFilterByStudentNameRow() {
+                return ((FilterByStudentNameRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new VistaCursosRow(builder);
+                return new FilterByStudentNameRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(VistaCursosRow);
+                return typeof(FilterByStudentNameRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.VistaCursosRowChanged != null)) {
-                    this.VistaCursosRowChanged(this, new VistaCursosRowChangeEvent(((VistaCursosRow)(e.Row)), e.Action));
+                if ((this.FilterByStudentNameRowChanged != null)) {
+                    this.FilterByStudentNameRowChanged(this, new FilterByStudentNameRowChangeEvent(((FilterByStudentNameRow)(e.Row)), e.Action));
                 }
             }
             
@@ -513,8 +562,8 @@ namespace SistemaCursosOnline {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.VistaCursosRowChanging != null)) {
-                    this.VistaCursosRowChanging(this, new VistaCursosRowChangeEvent(((VistaCursosRow)(e.Row)), e.Action));
+                if ((this.FilterByStudentNameRowChanging != null)) {
+                    this.FilterByStudentNameRowChanging(this, new FilterByStudentNameRowChangeEvent(((FilterByStudentNameRow)(e.Row)), e.Action));
                 }
             }
             
@@ -522,8 +571,8 @@ namespace SistemaCursosOnline {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.VistaCursosRowDeleted != null)) {
-                    this.VistaCursosRowDeleted(this, new VistaCursosRowChangeEvent(((VistaCursosRow)(e.Row)), e.Action));
+                if ((this.FilterByStudentNameRowDeleted != null)) {
+                    this.FilterByStudentNameRowDeleted(this, new FilterByStudentNameRowChangeEvent(((FilterByStudentNameRow)(e.Row)), e.Action));
                 }
             }
             
@@ -531,14 +580,14 @@ namespace SistemaCursosOnline {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.VistaCursosRowDeleting != null)) {
-                    this.VistaCursosRowDeleting(this, new VistaCursosRowChangeEvent(((VistaCursosRow)(e.Row)), e.Action));
+                if ((this.FilterByStudentNameRowDeleting != null)) {
+                    this.FilterByStudentNameRowDeleting(this, new FilterByStudentNameRowChangeEvent(((FilterByStudentNameRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveVistaCursosRow(VistaCursosRow row) {
+            public void RemoveFilterByStudentNameRow(FilterByStudentNameRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -547,7 +596,7 @@ namespace SistemaCursosOnline {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SistemaCursosOnlineDataSet ds = new SistemaCursosOnlineDataSet();
+                SistemaCursosOnlineDataSet1 ds = new SistemaCursosOnlineDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -565,7 +614,7 @@ namespace SistemaCursosOnline {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "VistaCursosDataTable";
+                attribute2.FixedValue = "FilterByStudentNameDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -609,25 +658,47 @@ namespace SistemaCursosOnline {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class VistaCursosRow : global::System.Data.DataRow {
+        public partial class FilterByStudentNameRow : global::System.Data.DataRow {
             
-            private VistaCursosDataTable tableVistaCursos;
+            private FilterByStudentNameDataTable tableFilterByStudentName;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal VistaCursosRow(global::System.Data.DataRowBuilder rb) : 
+            internal FilterByStudentNameRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableVistaCursos = ((VistaCursosDataTable)(this.Table));
+                this.tableFilterByStudentName = ((FilterByStudentNameDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string NombreEstudiante {
+                get {
+                    return ((string)(this[this.tableFilterByStudentName.NombreEstudianteColumn]));
+                }
+                set {
+                    this[this.tableFilterByStudentName.NombreEstudianteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string CedulaEstudiante {
+                get {
+                    return ((string)(this[this.tableFilterByStudentName.CedulaEstudianteColumn]));
+                }
+                set {
+                    this[this.tableFilterByStudentName.CedulaEstudianteColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int IdCurso {
                 get {
-                    return ((int)(this[this.tableVistaCursos.IdCursoColumn]));
+                    return ((int)(this[this.tableFilterByStudentName.IdCursoColumn]));
                 }
                 set {
-                    this[this.tableVistaCursos.IdCursoColumn] = value;
+                    this[this.tableFilterByStudentName.IdCursoColumn] = value;
                 }
             }
             
@@ -635,10 +706,10 @@ namespace SistemaCursosOnline {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string NombreCurso {
                 get {
-                    return ((string)(this[this.tableVistaCursos.NombreCursoColumn]));
+                    return ((string)(this[this.tableFilterByStudentName.NombreCursoColumn]));
                 }
                 set {
-                    this[this.tableVistaCursos.NombreCursoColumn] = value;
+                    this[this.tableFilterByStudentName.NombreCursoColumn] = value;
                 }
             }
             
@@ -647,14 +718,14 @@ namespace SistemaCursosOnline {
             public string Descripcion {
                 get {
                     try {
-                        return ((string)(this[this.tableVistaCursos.DescripcionColumn]));
+                        return ((string)(this[this.tableFilterByStudentName.DescripcionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Descripcion\' in table \'VistaCursos\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Descripcion\' in table \'FilterByStudentName\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVistaCursos.DescripcionColumn] = value;
+                    this[this.tableFilterByStudentName.DescripcionColumn] = value;
                 }
             }
             
@@ -662,10 +733,10 @@ namespace SistemaCursosOnline {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public System.DateTime FechaInicio {
                 get {
-                    return ((global::System.DateTime)(this[this.tableVistaCursos.FechaInicioColumn]));
+                    return ((global::System.DateTime)(this[this.tableFilterByStudentName.FechaInicioColumn]));
                 }
                 set {
-                    this[this.tableVistaCursos.FechaInicioColumn] = value;
+                    this[this.tableFilterByStudentName.FechaInicioColumn] = value;
                 }
             }
             
@@ -674,14 +745,14 @@ namespace SistemaCursosOnline {
             public System.DateTime FechaFin {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableVistaCursos.FechaFinColumn]));
+                        return ((global::System.DateTime)(this[this.tableFilterByStudentName.FechaFinColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FechaFin\' in table \'VistaCursos\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'FechaFin\' in table \'FilterByStudentName\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVistaCursos.FechaFinColumn] = value;
+                    this[this.tableFilterByStudentName.FechaFinColumn] = value;
                 }
             }
             
@@ -689,35 +760,46 @@ namespace SistemaCursosOnline {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string NombreProfesor {
                 get {
-                    return ((string)(this[this.tableVistaCursos.NombreProfesorColumn]));
+                    return ((string)(this[this.tableFilterByStudentName.NombreProfesorColumn]));
                 }
                 set {
-                    this[this.tableVistaCursos.NombreProfesorColumn] = value;
+                    this[this.tableFilterByStudentName.NombreProfesorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime FechaInscripcion {
+                get {
+                    return ((global::System.DateTime)(this[this.tableFilterByStudentName.FechaInscripcionColumn]));
+                }
+                set {
+                    this[this.tableFilterByStudentName.FechaInscripcionColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsDescripcionNull() {
-                return this.IsNull(this.tableVistaCursos.DescripcionColumn);
+                return this.IsNull(this.tableFilterByStudentName.DescripcionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetDescripcionNull() {
-                this[this.tableVistaCursos.DescripcionColumn] = global::System.Convert.DBNull;
+                this[this.tableFilterByStudentName.DescripcionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsFechaFinNull() {
-                return this.IsNull(this.tableVistaCursos.FechaFinColumn);
+                return this.IsNull(this.tableFilterByStudentName.FechaFinColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetFechaFinNull() {
-                this[this.tableVistaCursos.FechaFinColumn] = global::System.Convert.DBNull;
+                this[this.tableFilterByStudentName.FechaFinColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -725,22 +807,22 @@ namespace SistemaCursosOnline {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class VistaCursosRowChangeEvent : global::System.EventArgs {
+        public class FilterByStudentNameRowChangeEvent : global::System.EventArgs {
             
-            private VistaCursosRow eventRow;
+            private FilterByStudentNameRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public VistaCursosRowChangeEvent(VistaCursosRow row, global::System.Data.DataRowAction action) {
+            public FilterByStudentNameRowChangeEvent(FilterByStudentNameRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public VistaCursosRow Row {
+            public FilterByStudentNameRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -756,7 +838,7 @@ namespace SistemaCursosOnline {
         }
     }
 }
-namespace SistemaCursosOnline.SistemaCursosOnlineDataSetTableAdapters {
+namespace SistemaCursosOnline.SistemaCursosOnlineDataSet1TableAdapters {
     
     
     /// <summary>
@@ -768,7 +850,7 @@ namespace SistemaCursosOnline.SistemaCursosOnlineDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class VistaCursosTableAdapter : global::System.ComponentModel.Component {
+    public partial class FilterByStudentNameTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -782,7 +864,7 @@ namespace SistemaCursosOnline.SistemaCursosOnlineDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public VistaCursosTableAdapter() {
+        public FilterByStudentNameTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -879,13 +961,16 @@ namespace SistemaCursosOnline.SistemaCursosOnlineDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "VistaCursos";
+            tableMapping.DataSetTable = "FilterByStudentName";
+            tableMapping.ColumnMappings.Add("NombreEstudiante", "NombreEstudiante");
+            tableMapping.ColumnMappings.Add("CedulaEstudiante", "CedulaEstudiante");
             tableMapping.ColumnMappings.Add("IdCurso", "IdCurso");
             tableMapping.ColumnMappings.Add("NombreCurso", "NombreCurso");
             tableMapping.ColumnMappings.Add("Descripcion", "Descripcion");
             tableMapping.ColumnMappings.Add("FechaInicio", "FechaInicio");
             tableMapping.ColumnMappings.Add("FechaFin", "FechaFin");
             tableMapping.ColumnMappings.Add("NombreProfesor", "NombreProfesor");
+            tableMapping.ColumnMappings.Add("FechaInscripcion", "FechaInscripcion");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -899,58 +984,27 @@ namespace SistemaCursosOnline.SistemaCursosOnlineDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT IdCurso, NombreCurso, Descripcion, FechaInicio, FechaFin, NombreProfesor F" +
-                "ROM dbo.VistaCursos";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"    SELECT 
-        e.Nombre AS NombreEstudiante,
-        e.Cedula AS CedulaEstudiante,
-        c.IdCurso,
-        c.NombreCurso,
-        c.Descripcion,
-        c.FechaInicio,
-        c.FechaFin,
-        p.Nombre AS NombreProfesor,
-        i.FechaInscripcion
-    FROM Inscripcion i
-    INNER JOIN Estudiante e ON i.IdEstudiante = e.IdEstudiante
-    INNER JOIN Curso c ON i.IdCurso = c.IdCurso
-    INNER JOIN Profesor p ON c.IdProfesor = p.IdProfesor
-    WHERE e.Cedula = @CedulaEstudiante;";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CedulaEstudiante", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "CedulaEstudiante", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = @"SELECT 
-        e.Nombre AS NombreEstudiante,
-        e.Cedula AS CedulaEstudiante,
-        c.IdCurso,
-        c.NombreCurso,
-        c.Descripcion,
-        c.FechaInicio,
-        c.FechaFin,
-        p.Nombre AS NombreProfesor,
-        i.FechaInscripcion
-    FROM Inscripcion i
-    INNER JOIN Estudiante e ON i.IdEstudiante = e.IdEstudiante
-    INNER JOIN Curso c ON i.IdCurso = c.IdCurso
-    INNER JOIN Profesor p ON c.IdProfesor = p.IdProfesor
-    WHERE e.Nombre LIKE '%' + @NombreEstudiante + '%';";
-            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NombreEstudiante", global::System.Data.SqlDbType.NVarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "NombreEstudiante", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].CommandText = "dbo.FilterByStudentName";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NombreEstudiante", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SistemaCursosOnlineDataSet.VistaCursosDataTable dataTable) {
+        public virtual int Fill(SistemaCursosOnlineDataSet1.FilterByStudentNameDataTable dataTable, string NombreEstudiante) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((NombreEstudiante == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(NombreEstudiante));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -962,81 +1016,15 @@ namespace SistemaCursosOnline.SistemaCursosOnlineDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SistemaCursosOnlineDataSet.VistaCursosDataTable GetData() {
+        public virtual SistemaCursosOnlineDataSet1.FilterByStudentNameDataTable GetData(string NombreEstudiante) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SistemaCursosOnlineDataSet.VistaCursosDataTable dataTable = new SistemaCursosOnlineDataSet.VistaCursosDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByStudentCedula(SistemaCursosOnlineDataSet.VistaCursosDataTable dataTable, string CedulaEstudiante) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((CedulaEstudiante == null)) {
-                throw new global::System.ArgumentNullException("CedulaEstudiante");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(CedulaEstudiante));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual SistemaCursosOnlineDataSet.VistaCursosDataTable GetDataByStudentCedula(string CedulaEstudiante) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((CedulaEstudiante == null)) {
-                throw new global::System.ArgumentNullException("CedulaEstudiante");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(CedulaEstudiante));
-            }
-            SistemaCursosOnlineDataSet.VistaCursosDataTable dataTable = new SistemaCursosOnlineDataSet.VistaCursosDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByStudentName(SistemaCursosOnlineDataSet.VistaCursosDataTable dataTable, string NombreEstudiante) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((NombreEstudiante == null)) {
-                throw new global::System.ArgumentNullException("NombreEstudiante");
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(NombreEstudiante));
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(NombreEstudiante));
             }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual SistemaCursosOnlineDataSet.VistaCursosDataTable GetDataByStudentName(string NombreEstudiante) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
-            if ((NombreEstudiante == null)) {
-                throw new global::System.ArgumentNullException("NombreEstudiante");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(NombreEstudiante));
-            }
-            SistemaCursosOnlineDataSet.VistaCursosDataTable dataTable = new SistemaCursosOnlineDataSet.VistaCursosDataTable();
+            SistemaCursosOnlineDataSet1.FilterByStudentNameDataTable dataTable = new SistemaCursosOnlineDataSet1.FilterByStudentNameDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1110,7 +1098,7 @@ namespace SistemaCursosOnline.SistemaCursosOnlineDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(SistemaCursosOnlineDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(SistemaCursosOnlineDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1120,7 +1108,7 @@ namespace SistemaCursosOnline.SistemaCursosOnlineDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(SistemaCursosOnlineDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(SistemaCursosOnlineDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1130,7 +1118,7 @@ namespace SistemaCursosOnline.SistemaCursosOnlineDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(SistemaCursosOnlineDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(SistemaCursosOnlineDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1164,7 +1152,7 @@ namespace SistemaCursosOnline.SistemaCursosOnlineDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(SistemaCursosOnlineDataSet dataSet) {
+        public virtual int UpdateAll(SistemaCursosOnlineDataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
